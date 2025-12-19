@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_BASE_URL = "https://mern-intern-backend-h1kq.onrender.com";
 
 const api = axios.create({
   baseURL: API_BASE_URL,
