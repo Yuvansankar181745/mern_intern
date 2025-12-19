@@ -1,0 +1,141 @@
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.filter-btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  background: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.notification-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notification-item.unread {
+  background-color: #e7f3ff;
+  border-color: #007bff;
+}
+
+.notification-item.notification-success {
+  border-left: 4px solid #28a745;
+}
+
+.notification-item.notification-error {
+  border-left: 4px solid #dc3545;
+}
+
+.notification-item.notification-warning {
+  border-left: 4px solid #ffc107;
+}
+
+.notification-item.notification-info {
+  border-left: 4px solid #17a2b8;
+}
+
+.notification-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.notification-item.notification-success .notification-icon {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.notification-item.notification-error .notification-icon {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.notification-item.notification-warning .notification-icon {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.notification-item.notification-info .notification-icon {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.notification-message {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.notification-time {
+  color: #999;
+  font-size: 12px;
+}
+
+.notification-badge {
+  background-color: #007bff;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+

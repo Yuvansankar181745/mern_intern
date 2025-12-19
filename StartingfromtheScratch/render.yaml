@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: mobile-recharge-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        fromDatabase:
+          name: mobile-recharge-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+    
+  - type: web
+    name: mobile-recharge-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/build
+    envVars:
+      - key: REACT_APP_API_URL
+        fromService:
+          type: web
+          name: mobile-recharge-backend
+          property: host
+
+databases:
+  - name: mobile-recharge-db
+    databaseName: mobileRecharge
+    user: admin

@@ -1,0 +1,48 @@
+.plans-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.plan-item {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plan-item:hover {
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.plan-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.plan-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.plan-details {
+  color: #666;
+  font-size: 14px;
+}
+
+.plan-details p {
+  margin: 5px 0;
+}
+

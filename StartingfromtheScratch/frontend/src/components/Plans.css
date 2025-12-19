@@ -1,0 +1,228 @@
+.operator-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.operator-btn {
+  padding: 10px 20px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.operator-btn:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.operator-btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.plan-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.plan-card:hover::before {
+  transform: scaleX(1);
+}
+
+.plan-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(102, 126, 234, 0.3);
+  border-color: rgba(102, 126, 234, 0.5);
+}
+
+.plan-card-header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.plan-operator-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.plan-card-header h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.plan-price-large {
+  font-size: 42px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 10px 0;
+}
+
+.plan-name {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.validity-section {
+  margin-bottom: 40px;
+}
+
+.validity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.validity-header h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.plan-count {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.plan-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.plan-feature:last-child {
+  border-bottom: none;
+}
+
+.feature-icon {
+  font-size: 20px;
+  width: 32px;
+  text-align: center;
+}
+
+.plan-feature > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.no-plans-message {
+  text-align: center;
+  padding: 40px;
+}
+
+.no-plans-message h3 {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.no-plans-message code {
+  background: #f0f0f0;
+  padding: 8px 16px;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 10px 0;
+  font-family: 'Courier New', monospace;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.plan-card-body {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.plan-feature {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.plan-feature:last-child {
+  border-bottom: none;
+}
+
+.feature-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.feature-value {
+  color: #333;
+  font-weight: 600;
+}
+
+.plan-description {
+  margin-top: 15px;
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.plan-select-btn {
+  width: 100%;
+  margin-top: auto;
+}
+

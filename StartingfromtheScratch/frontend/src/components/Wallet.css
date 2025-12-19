@@ -1,0 +1,22 @@
+.wallet-balance-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.wallet-balance-card h2 {
+  color: white;
+  opacity: 0.9;
+}
+
+.balance-amount {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.balance-info {
+  color: white;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
